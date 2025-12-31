@@ -60,3 +60,47 @@ body {
 ::-webkit-scrollbar-track {           
     background-color: var(--bg-color);
 }
+
+
+/* TRASFORMA I CALLOUT IN PULSANTI */
+.notion-callout {
+  /* Design del pulsante */
+  background: #000 !important; /* Sfondo Nero (cambia con #2563eb per blu) */
+  color: #fff !important; /* Testo Bianco */
+  border-radius: 50px !important; /* Bordi molto arrotondati (a pillola) */
+  border: none !important; /* Rimuove i bordi grigi standard */
+  
+  /* Posizionamento e Dimensioni */
+  width: fit-content !important; /* Il pulsante si stringe attorno al testo */
+  margin: 20px auto !important; /* Centra il pulsante nella pagina */
+  padding: 12px 28px !important; /* Spazio interno */
+  
+  /* Ombre e Effetti */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Effetto al passaggio del mouse */
+.notion-callout:hover {
+  transform: translateY(-2px); /* Si alza leggermente */
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  cursor: pointer;
+}
+
+/* Stile del testo interno */
+.notion-callout-text {
+  font-weight: 600;
+  margin: 0 !important; /* Rimuove margini strani del testo */
+}
+
+/* Rimuove la sottolineatura dai link dentro il callout */
+.notion-callout a {
+  color: #fff !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
+  opacity: 1 !important;
+}
+
+/* OPZIONALE: Se vuoi nascondere l'icona del callout, togli il commento sotto */
+/* .notion-callout .notion-page-icon-wrapper { display: none !important; } */
+
